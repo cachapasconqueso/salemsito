@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHPA - Aprendamos Kichwa</title>
+    <link rel="icon" href="assets/icon/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="custom-navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">ASHPA</h1>
+            <div class="nav-buttons">
+                <button class="nav-btn nav-btn-vocab" onclick="scrollToSection('seccion-vocabulario')">
+                    Vocabulario
+                    <i class="fas fa-book"></i>
+                </button>
+                <button class="nav-btn nav-btn-play" onclick="scrollToSection('seccion-juego')">
+                    Jugar
+                    <i class="fas fa-gamepad"></i>
+                </button>
+                <button class="nav-btn nav-btn-register" onclick="scrollToSection('seccion-registro')">
+                    Regístrate
+                    <i class="fas fa-user-plus"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FONDO ANIMADO -->
+    <div class="background-landscape">
+        <div class="sky"></div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="main-title">ASHPA</h1>
+                <p class="subtitle">Aprendamos juntos nuestro idioma</p>
+                <div class="img-container">
+                    <img src="assets/img/ninos2.png" class="hero-img animate-entry" alt="Niños">
+                </div>
+            </div>
+        </section>
+
+        <!-- CAMBIO 1: SECCIONES QUIÉNES SOMOS Y MISIÓN LADO A LADO -->
+        <section class="dual-info-section fade-in">
+            <div class="info-card-dual">
+                <div class="glass-box with-avatar">
+                    <div class="avatar-circle animate-float">
+                        <img src="assets/img/pensar.png" class="avatar-img" alt="Avatar">
+                    </div>
+                    <h2>¿QUIÉNES SOMOS?</h2>
+                    <p>Somos un equipo multidisciplinario unido por un objetivo: diseñar soluciones interactivas que aseguren que el quichua no sea solo un recuerdo, sino un lenguaje vivo para las nuevas generaciones.</p>
+                </div>
+            </div>
+            
+            <div class="info-card-dual">
+                <div class="glass-box with-avatar">
+                    <div class="avatar-circle animate-float">
+                        <img src="assets/img/cometa.png" class="avatar-img" alt="Cometa">
+                    </div>
+                    <h2>MISIÓN</h2>
+                    <p>Fusionar tecnología y tradición para mantener vivo el quichua, creando una experiencia interactiva donde aprender nuestra lengua ancestral sea tan divertido como jugar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAMBIO 3: NUEVA SECCIÓN "PARA QUIÉN" -->
+        <section class="para-quien-section fade-in">
+            <div class="para-quien-card">
+                <div class="glass-box with-avatar-small">
+                    <div class="avatar-circle-small animate-float">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2>¿PARA QUIÉN?</h2>
+                    <p>Para niños, jóvenes y adultos que desean aprender o reconectar con el idioma kichwa de manera divertida e interactiva. Ideal para comunidades, escuelas y familias.</p>
+                </div>
+            </div>
+            
+            <div class="para-quien-card">
+                <div class="glass-box with-avatar-small">
+                    <div class="avatar-circle-small animate-float" style="background: #8BC34A;">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h2>¿PARA QUÉ SIRVE?</h2>
+                    <p>Para preservar y revitalizar el idioma kichwa mediante el aprendizaje gamificado. Facilita el vocabulario básico y promueve el uso cotidiano de la lengua ancestral.</p>
+                </div>
+            </div>
+            
+            <div class="para-quien-card">
+                <div class="glass-box with-avatar-small">
+                    <div class="avatar-circle-small animate-float" style="background: #0088cc;">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h2>IMPACTO</h2>
+                    <p>Contribuye a la preservación cultural, fortalece la identidad indígena y crea un puente intergeneracional para que el kichwa siga vivo en las nuevas generaciones.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: APRENDE VOCABULARIO -->
+        <section class="vocabulary-section" id="seccion-vocabulario">
+            <div class="vocabulary-container">
+                <h2 class="vocabulary-title">Aprende el Vocabulario</h2>
+                <p class="vocabulary-subtitle">Conoce las palabras en Kichwa antes de jugar</p>
+                
+                <div class="vocabulary-grid">
+                    <!-- Se llenará dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN JUEGO -->
+        <section class="game-section" id="seccion-juego">
+            
+            <!-- PANTALLA DE INSTRUCCIONES -->
+            <div id="instructions-screen" class="instructions-screen">
+                <div class="instructions-container">
+                    <div class="scroll-banner">
+                        <h2 class="game-title-banner">¿Cómo Jugar?</h2>
+                    </div>
+                    
+                    <!-- CAMBIO 2: INSTRUCCIONES EN FORMATO 2x2 -->
+                    <div class="instructions-content-grid">
+                        <div class="instruction-step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">
+                                <h3>Selecciona una Carta</h3>
+                                <p>Haz clic en una carta desbloqueada del tablero</p>
+                            </div>
+                        </div>
+                        
+                        <div class="instruction-step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">
+                                <h3>Observa la Imagen</h3>
+                                <p>Mira bien la carta y piensa en la respuesta</p>
+                            </div>
+                        </div>
+                        
+                        <div class="instruction-step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">
+                                <h3>Escribe en Español</h3>
+                                <p>Escribe el nombre del objeto/animal en español</p>
+                            </div>
+                        </div>
+                        
+                        <div class="instruction-step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">
+                                <h3>Desbloquea Niveles</h3>
+                                <p>¡Solo avanzas si aciertas! Desbloquea todas las cartas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mascot-instructions">
+                        <img src="assets/img/juego.png" alt="Mascota" class="mascot-game">
+                    </div>
+                    
+                    <button class="btn-start-game" onclick="startGame()">
+                        <i class="fas fa-play"></i>
+                        ¡JUGAR AHORA!
+                    </button>
+                </div>
+            </div>
+            
+            <!-- TABLERO DE JUEGO -->
+            <div id="game-board-screen" class="game-board-screen" style="display: none;">
+                <div class="game-header">
+                    <button class="btn-back" onclick="backToInstructions()">
+                        <i class="fas fa-arrow-left"></i> Volver
+                    </button>
+                    <div class="game-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-unlock"></i>
+                            <span id="unlocked-count">1</span>/<span id="total-count">33</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <span id="stars-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cards-grid" id="cards-grid">
+                    <!-- Se llenará dinámicamente con JavaScript -->
+                </div>
+            </div>
+            
+            <!-- MODAL DE JUEGO (cuando haces click en una carta) -->
+            <div id="game-modal" class="game-modal">
+                <div class="modal-content">
+                    <button class="modal-close" onclick="closeGameModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    
+                    <div class="modal-progress">
+                        <span>Nivel <span id="modal-level">1</span></span>
+                    </div>
+                    
+                    <div class="modal-card">
+                        <img id="modal-card-image" src="" alt="Carta" class="modal-card-img">
+                    </div>
+                    
+                    <div class="modal-input-zone">
+                        <input type="text" id="modal-answer" class="modal-input" placeholder="Escribe en español...">
+                        <button class="btn-check-answer" onclick="checkAnswerModal()">
+                            <i class="fas fa-check"></i> VERIFICAR
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- SECCIÓN REGISTRO -->
+        <section class="register-section" id="seccion-registro">
+            <div class="glass-box form-container">
+                <h2>¡Únete a la Aventura!</h2>
+                <p class="form-subtitle">Regístrate para guardar tu progreso próximamente.</p>
+                
+                <form id="registration-form" onsubmit="return registrarUsuario(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Nombres</label>
+                            <input type="text" name="nombres" placeholder="Ej. Juan" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Apellidos</label>
+                            <input type="text" name="apellidos" placeholder="Ej. Pérez" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha de Nacimiento</label>
+                            <input type="date" name="fechaNacimiento" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Correo Electrónico</label>
+                            <input type="email" name="correo" placeholder="correo@ejemplo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>País</label>
+                            <input type="text" name="pais" placeholder="Ej. Ecuador" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Provincia / Estado</label>
+                            <input type="text" name="estado" placeholder="Ej. Pichincha" required>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="submit" class="btn-register">
+                            REGISTRARME
+                            <i class="fas fa-rocket"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast para mensajes -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

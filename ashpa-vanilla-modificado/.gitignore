@@ -1,0 +1,11 @@
+# Vercel
+.vercel
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Node modules (si llegas a usar)
+node_modules/
